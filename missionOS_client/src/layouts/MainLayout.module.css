@@ -1,0 +1,17 @@
+.layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    grid-template-rows: 70px 1fr;
+
+    grid-template-areas:
+        "sidebar header"
+        "sidebar main";
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.main {
+    grid-area: main;
+    overflow-y: auto;
+}
