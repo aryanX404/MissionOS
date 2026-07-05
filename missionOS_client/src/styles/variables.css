@@ -1,0 +1,36 @@
+:root {
+
+    /* Backgrounds */
+
+    --bg-primary: #040404;
+    --bg-secondary: #0A0A0A;
+    --bg-card: #101010;
+
+    /* Accent */
+
+    --accent: #00FF88;
+    --accent-dark: #00CC6A;
+    --accent-light: #5CFFB2;
+
+    /* Text */
+
+    --text-primary: #E8FFE8;
+    --text-secondary: #94B894;
+
+    /* Borders */
+
+    --border: rgba(0,255,136,.20);
+
+    /* Glow */
+
+    --glow-sm: 0 0 8px rgba(0,255,136,.25);
+
+    --glow-md: 0 0 20px rgba(0,255,136,.30);
+
+    --glow-lg: 0 0 40px rgba(0,255,136,.35);
+
+    /* Radius */
+
+    --radius: 10px;
+
+}
