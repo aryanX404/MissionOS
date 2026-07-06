@@ -2,7 +2,7 @@ import { FiSearch } from "react-icons/fi";
 import styles from "./SearchBar.module.css";
 
 const SearchBar = ({
-  placeholder = "Search or type a command...",
+  placeholder="Execute command..."
 }) => {
   return (
     <div className={styles.searchBar}>
