@@ -1,0 +1,8 @@
+.clock {
+    color: var(--accent);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    min-width: 110px;
+    text-align: right;
+}
