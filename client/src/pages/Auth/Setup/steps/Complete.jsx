@@ -9,7 +9,6 @@ const Complete = () => {
   const handleFinish = async () => {
     try {
       await completeSetup();
-
       navigate("/dashboard");
     } catch (error) {
       alert(error.message);

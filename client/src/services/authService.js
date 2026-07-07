@@ -1,4 +1,7 @@
 const BASE_URL = `${import.meta.env.VITE_API_URL}/auth`;
+import { STORAGE_KEYS } from "../utils/storage";
+
+
 
 export const signup = async (userData) => {
     const response = await fetch(`${BASE_URL}/signup`, {
@@ -35,7 +38,7 @@ export const login = async (userData) => {
 
 export const completeSetup = async () => {
 
-    const token = localStorage.getItem("token");
+    const token = localStorage.getItem(STORAGE_KEYS.TOKEN);
 
     const response = await fetch(
         `${BASE_URL}/complete-setup`,
