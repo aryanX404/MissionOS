@@ -1,0 +1,19 @@
+.dashboard{
+    display:grid;
+    grid-template-columns:250px 1fr;
+    height:100vh;
+    background:var(--bg-primary);
+    overflow:hidden;
+}
+
+.main{
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+}
+
+.content{
+    flex:1;
+    overflow-y:auto;
+    padding:var(--space-xl);
+}
