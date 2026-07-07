@@ -1,9 +1,20 @@
 import { useNavigate } from "react-router-dom";
 import styles from "../Setup.module.css";
 import CyberButton from "../../../../components/ui/CyberButton";
+import { completeSetup } from "../../../../services/authService";
 
 const Complete = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
+
+  const handleFinish = async () => {
+    try {
+      await completeSetup();
+
+      navigate("/dashboard");
+    } catch (error) {
+      alert(error.message);
+    }
+  };
   return (
     <div className={styles.container}>
       <div className={styles.card}>
@@ -15,7 +26,7 @@ const Complete = () => {
           Your personal AI operating system has been initialized successfully.
         </p>
 
-        <CyberButton onClick={() => navigate("/dashboard")}>
+        <CyberButton onClick={handleFinish}>
           Enter Dashboard
         </CyberButton>
       </div>

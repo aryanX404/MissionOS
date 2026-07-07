@@ -1,5 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import { Routes, Route } from "react-router-dom";
+import ProtectedRoute from "../components/auth/ProtectedRoute";
 import Landing from "../pages/Landing";
 import Dashboard from "../pages/Dashboard";
 import Login from "../pages/Auth/Login";
@@ -8,17 +8,20 @@ import Setup from "../pages/Auth/Setup";
 
 const AppRoutes = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-
-        <Route path="/" element={<Landing />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/setup" element={<Setup />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Landing />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/setup" element={<Setup />} />
+      <Route
+        path="/dashboard"
+        element={
+          <ProtectedRoute>
+            <Dashboard />
+          </ProtectedRoute>
+        }
+      />
+    </Routes>
   );
 };
 
