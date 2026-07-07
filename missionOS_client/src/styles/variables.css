@@ -1,0 +1,85 @@
+:root {
+  /* ==========================
+      BACKGROUND
+  ========================== */
+
+  --bg-primary: #040404;
+  --bg-secondary: #0a0a0a;
+  --bg-card: #101010;
+  --bg-hover: #151515;
+
+  /* ==========================
+      GREEN PALETTE
+  ========================== */
+
+  --green-100: #d9fff2;
+  --green-200: #9af7cc;
+  --green-300: #5ee8a5;
+  --green-400: #26d67e;
+  --green-500: #00c76a;
+  --green-600: #00b35f;
+  --green-700: #00924d;
+  --green-800: #006c39;
+  --green-900: #004626;
+
+  /* Main Accent */
+
+  --accent: var(--green-500);
+  --accent-hover: var(--green-400);
+
+  /* ==========================
+      TEXT
+  ========================== */
+
+  --text-primary: #ffffff;
+  --text-secondary: #a3b5b0;
+  --text-muted: #6b7c76;
+
+  /* ==========================
+      BORDER
+  ========================== */
+
+  --border: #1c1c1c;
+  --border-light: rgba(0, 199, 106, 0.18);
+
+  /* ==========================
+      GLOW
+  ========================== */
+
+  --glow-soft: rgba(0, 199, 106, 0.12);
+  --glow-medium: rgba(0, 199, 106, 0.22);
+  --glow-strong: rgba(0, 199, 106, 0.35);
+
+  /* ==========================
+      RADIUS
+  ========================== */
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+
+  /* ==========================
+      SPACING
+  ========================== */
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 72px;
+
+  /* ==========================
+      TRANSITION
+  ========================== */
+
+  --transition: 0.25s ease;
+
+  /* ==========================
+    FONTS
+========================== */
+
+  --font-heading: "Oxanium", sans-serif;
+  --font-body: "Inter", sans-serif;
+}

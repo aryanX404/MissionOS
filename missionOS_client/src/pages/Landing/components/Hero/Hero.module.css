@@ -1,0 +1,255 @@
+.hero {
+  min-height: calc(100vh - 80px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap:120px;
+  position: relative;
+  overflow: hidden;
+  padding: 40px var(--space-3xl) 0;
+  padding-top: 0;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 900px;
+  height: 900px;
+  right: -250px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--glow-soft), transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  gap: 28px;
+
+  z-index: 2;
+}
+
+.badge {
+  font-family: var(--font-heading);
+  width: fit-content;
+  color: var(--accent);
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  border: 1px solid var(--border-light);
+  border-radius: 100px;
+  background: rgba(0, 199, 106, 0.05);
+}
+
+.title {
+  font-size: 6rem;
+  font-family: var(--font-heading);
+  line-height: 0.95;
+  position:relative;
+  font-weight: 700;
+}
+
+.title::after{
+    content:"";
+    display:block;
+    width:90px;
+    height:3px;
+    margin-top:18px;
+    background:var(--accent);
+    box-shadow:0 0 15px var(--glow-medium);
+    border-radius:999px;
+}
+
+.subtitle {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.description {
+  max-width: 560px;
+
+  color: var(--text-secondary);
+
+  line-height: 1.9;
+
+  font-size: 1.08rem;
+}
+
+.actions {
+  display: flex;
+  gap: 20px;
+  margin-top: 12px;
+}
+
+
+.visual {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.visual::before{
+    content:"";
+    position:absolute;
+    width:520px;
+    height:520px;
+    border-radius:50%;
+    background:radial-gradient(
+        circle,
+        rgba(0,199,106,.05),
+        transparent 70%
+    );
+    filter:blur(70px);
+    z-index:-1;
+}
+
+.aiCore {
+  width: 380px;
+  height: 380px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--border-light);
+  overflow: hidden;
+  background: radial-gradient(
+    circle,
+    rgba(0, 199, 106, 0.08) 0%,
+    rgba(0, 199, 106, 0.03) 40%,
+    transparent 100%
+  );
+  box-shadow: 0 0 30px var(--glow-soft);
+}
+
+.aiCore::before {
+  content: "";
+  position: absolute;
+  inset: 20%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 199, 106, 0.25) 0%,
+    rgba(0, 199, 106, 0.1) 35%,
+    rgba(0, 199, 106, 0.03) 65%,
+    transparent 100%
+  );
+  filter: blur(18px);
+  z-index: -1;
+}
+
+.aiCore::after {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 199, 106, 0.08), transparent 70%);
+  z-index: -2;
+}
+
+.ring1,
+.ring2,
+.ring3 {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid var(--border-light);
+}
+
+.ring1 {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+.ring2 {
+  width: 78%;
+  height: 78%;
+  opacity: 0.6;
+}
+
+.ring3 {
+  width: 56%;
+  height: 56%;
+  opacity: 0.3;
+}
+
+.ring1,
+.ring2,
+.ring3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  width: 18px;
+  height: 18px;
+  background: radial-gradient(
+    circle,
+    #ffffff 0%,
+    var(--accent) 45%,
+    var(--green-700) 100%
+  );
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 15px var(--glow-medium),
+    0 0 35px var(--glow-strong),
+    0 0 60px var(--glow-soft);
+  z-index: 10;
+}
+
+.node {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 12px var(--glow-medium);
+}
+
+.nodeTop {
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nodeRight {
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nodeBottom {
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nodeLeft {
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}

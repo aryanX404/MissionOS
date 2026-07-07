@@ -1,0 +1,103 @@
+.workflow{
+
+    padding:120px var(--space-3xl);
+
+}
+
+.header{
+
+    text-align:center;
+
+    margin-bottom:80px;
+
+}
+
+.badge{
+
+    color:var(--accent);
+
+    font-family:var(--font-heading);
+
+    letter-spacing:3px;
+
+    margin-bottom:16px;
+
+}
+
+.header h2{
+
+    font-family:var(--font-heading);
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
+}
+
+.subtitle{
+
+    color:var(--text-secondary);
+
+    max-width:700px;
+
+    margin:0 auto;
+
+    line-height:1.8;
+
+}
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:32px;
+
+}
+
+.card{
+
+    background:var(--bg-card);
+
+    border:1px solid var(--border-light);
+
+    border-radius:var(--radius-lg);
+
+    padding:32px;
+
+    min-height:280px;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.number{
+
+    color:var(--accent);
+
+    font-family:var(--font-heading);
+
+    font-size:2rem;
+
+    margin-bottom:28px;
+
+}
+
+.card h3{
+
+    font-family:var(--font-heading);
+
+    margin-bottom:20px;
+
+}
+
+.card p{
+
+    color:var(--text-secondary);
+
+    line-height:1.8;
+
+}

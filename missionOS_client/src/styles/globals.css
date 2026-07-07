@@ -1,0 +1,10 @@
+body{
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}
