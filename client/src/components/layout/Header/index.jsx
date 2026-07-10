@@ -60,11 +60,12 @@ const Header = () => {
             <div className={styles.left}>
                 <h1>
                     {greeting},{" "}
-                    <span>{user?.name.split(" ")[0] || "User"} 👋</span>
+                    <span>{user?.name.split(" ")[0] || "User"}</span>
                 </h1>
                 <p>{date}</p>
             </div>
-            <div className={styles.right}>
+
+            <div className={styles.middle}>
                 <div className={styles.search}>
                     <Search size={16}/>
                     <input
@@ -72,6 +73,8 @@ const Header = () => {
                         placeholder="Search or type a command..."
                     />
                 </div>
+            </div>
+            <div className={styles.right}>
                 <div className={styles.time}>
                     {time}
                 </div>

@@ -1,25 +1,17 @@
+import AppShell from "../../layouts/AppShell";
 import styles from "./Dashboard.module.css";
-
-import Header from "./components/Header";
-import Sidebar from "./components/Sidebar";
+import MissionModule from "../../components/dashboard/MissionModule";
+import HudCard from "../../components/dashboard/HudCard";
 
 const Dashboard = () => {
   return (
-    <div className={styles.dashboard}>
-
-      <Sidebar />
-
-      <div className={styles.main}>
-
-        <Header />
-
-        <main className={styles.content}>
-          {/* Dashboard Components will come here */}
-        </main>
-
+    <AppShell>
+      <div className={styles.grid}>
+        <HudCard title="MISSION MODULE">
+          <MissionModule />
+        </HudCard>
       </div>
-
-    </div>
+    </AppShell>
   );
 };
 

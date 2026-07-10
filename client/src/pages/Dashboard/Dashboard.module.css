@@ -1,19 +1,45 @@
-.dashboard{
+.grid{
+
     display:grid;
-    grid-template-columns:250px 1fr;
-    height:100vh;
-    background:var(--bg-primary);
-    overflow:hidden;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:24px;
+
 }
 
-.main{
-    display:flex;
-    flex-direction:column;
-    overflow:hidden;
+.grid > :nth-child(1){
+
+    min-height:280px;
+
 }
 
-.content{
-    flex:1;
-    overflow-y:auto;
-    padding:var(--space-xl);
+.grid > :nth-child(2){
+
+    min-height:280px;
+
+}
+
+.grid > :nth-child(3){
+
+    min-height:220px;
+
+}
+
+.grid > :nth-child(4){
+
+    min-height:220px;
+
+}
+
+.grid > :nth-child(5){
+
+    min-height:240px;
+
+}
+
+.grid > :nth-child(6){
+
+    min-height:240px;
+
 }
