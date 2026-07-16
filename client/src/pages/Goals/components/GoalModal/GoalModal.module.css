@@ -1,0 +1,99 @@
+.overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.75);
+
+    backdrop-filter:blur(6px);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999;
+
+}
+
+.modal{
+
+    width:620px;
+
+    background:#161616;
+
+    border:1px solid rgba(0,255,140,.15);
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    animation:popup .25s ease;
+
+}
+
+.header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:22px 28px;
+
+    border-bottom:1px solid rgba(0,255,140,.08);
+
+}
+
+.header h2{
+
+    color:white;
+
+    font-family:"Orbitron",sans-serif;
+
+}
+
+.header button{
+
+    background:none;
+
+    border:none;
+
+    color:var(--text-secondary);
+
+    cursor:pointer;
+
+    font-size:1.3rem;
+
+}
+
+.body{
+
+    padding:32px;
+
+    color:var(--text-secondary);
+
+}
+
+@keyframes popup{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}

@@ -1,90 +1,54 @@
 import styles from "./Sidebar.module.css";
 
-import {
-  LayoutDashboard,
-  Target,
-  Repeat,
-  Wallet,
-  BookOpen,
-  Bot,
-  BarChart3,
-  Settings,
-} from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
+import {menu} from "../../../constants/sidebar";
+
+
 
 const Sidebar = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   return (
     <aside className={styles.sidebar}>
-
       <div className={styles.logo}>
-
         <h1>
-          MISSION
-          <br />
-          OS
+          MISSION <br />OS
         </h1>
-
         <p>Personal AI System</p>
-
       </div>
 
-      <nav className={styles.navigation}>
+      <nav className={styles.menu}>
+        {menu.map((item) => {
+          const Icon = item.icon;
 
-        <a className={`${styles.link} ${styles.active}`}>
-          <LayoutDashboard size={18} />
-          Dashboard
-        </a>
+          return (
+            <button
+              key={item.path}
+              onClick={() => navigate(item.path)}
+              className={
+                location.pathname === item.path
+                  ? `${styles.item} ${styles.active}`
+                  : styles.item
+              }
+            >
+              <Icon />
 
-        <a className={styles.link}>
-          <Target size={18} />
-          Goals
-        </a>
-
-        <a className={styles.link}>
-          <Repeat size={18} />
-          Habits
-        </a>
-
-        <a className={styles.link}>
-          <Wallet size={18} />
-          Finance
-        </a>
-
-        <a className={styles.link}>
-          <BookOpen size={18} />
-          Journal
-        </a>
-
-        <a className={styles.link}>
-          <Bot size={18} />
-          AI Coach
-        </a>
-
-        <a className={styles.link}>
-          <BarChart3 size={18} />
-          Analytics
-        </a>
-
-        <a className={styles.link}>
-          <Settings size={18} />
-          Settings
-        </a>
-
+              <span>{item.title}</span>
+            </button>
+          );
+        })}
       </nav>
 
-      <div className={styles.status}>
-
+      <div className={styles.footer}>
         <div className={styles.dot}></div>
 
         <div>
-
           <h4>SYSTEM ONLINE</h4>
 
           <p>Awaiting Login...</p>
-
         </div>
-
       </div>
-
     </aside>
   );
 };

@@ -165,3 +165,29 @@
     align-items: center;
 }
 
+.logout{
+    width:46px;
+    height:46px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:none;
+    border-radius:999px;
+    background:#2b1111;
+    color:#ff5d5d;
+    cursor:pointer;
+    transition:.25s;
+    font-size:1.2rem;
+}
+
+.logout:hover{
+    background:#d32f2f;
+    color:white;
+    transform:translateY(-2px);
+    box-shadow:0 0 16px rgba(255,0,0,.25);
+}
+
+.logout:active{
+    transform:scale(.95);
+}
+

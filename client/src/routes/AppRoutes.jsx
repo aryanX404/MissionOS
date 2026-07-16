@@ -5,6 +5,14 @@ import Dashboard from "../pages/Dashboard";
 import Login from "../pages/Auth/Login";
 import Signup from "../pages/Auth/Signup";
 import Setup from "../pages/Auth/Setup";
+import Goals from "../pages/Goals";
+import Habits from "../pages/Habits";
+import Finance from "../pages/Finance";
+import Journal from "../pages/Journal";
+import AICoach from "../pages/AICoach";
+import Analytics from "../pages/Analytics";
+import Settings from "../pages/Settings";
+import GoalWorkspace from "../pages/Goals/GoalWorkspace";
 
 const AppRoutes = () => {
   return (
@@ -21,6 +29,69 @@ const AppRoutes = () => {
           </ProtectedRoute>
         }
       />
+      <Route
+        path="/goals"
+        element={
+          <ProtectedRoute>
+            <Goals />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/habits"
+        element={
+          <ProtectedRoute>
+            <Habits />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/finance"
+        element={
+          <ProtectedRoute>
+            <Finance />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/journal"
+        element={
+          <ProtectedRoute>
+            <Journal />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/ai-coach"
+        element={
+          <ProtectedRoute>
+            <AICoach />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/analytics"
+        element={
+          <ProtectedRoute>
+            <Analytics />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/settings"
+        element={
+          <ProtectedRoute>
+            <Settings />
+          </ProtectedRoute>
+        }
+      />
+      <Route path="/goals/long-term/:goalId" element={<GoalWorkspace />} />
     </Routes>
   );
 };

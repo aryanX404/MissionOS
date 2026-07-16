@@ -1,0 +1,10 @@
+.workspace{
+    position: relative;
+    margin-top: -1px;
+    background: #181818;
+    border: 1px solid rgba(0,255,140,.12);
+    padding: 40px;
+    min-height: 700px;
+    overflow-y: auto;
+
+}

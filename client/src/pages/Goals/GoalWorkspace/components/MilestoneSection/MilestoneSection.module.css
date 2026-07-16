@@ -1,0 +1,19 @@
+.card {
+  background: #181818;
+
+  border: 1px solid rgba(0, 255, 140, 0.12);
+
+  border-radius: 16px;
+
+  padding: 24px;
+
+  min-height: 320px;
+}
+
+.card h2 {
+  margin-bottom: 20px;
+}
+
+.card p {
+  color: var(--text-secondary);
+}

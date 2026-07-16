@@ -1,0 +1,99 @@
+.form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+}
+
+.group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.group label{
+
+    color:var(--text-secondary);
+
+    font-size:.9rem;
+
+}
+
+.group input,
+.group textarea,
+.group select{
+
+    width:100%;
+
+    padding:14px 16px;
+
+    background:#101010;
+
+    border:1px solid rgba(0,255,140,.12);
+
+    color:white;
+
+    border-radius:10px;
+
+    font-size:.95rem;
+
+}
+
+.group textarea{
+
+    resize:vertical;
+
+}
+
+.group input:focus,
+.group textarea:focus,
+.group select:focus{
+
+    outline:none;
+
+    border-color:var(--accent);
+
+}
+
+.row{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:20px;
+
+}
+
+.actions{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+}
+
+.save{
+
+    padding:12px 28px;
+
+    background:var(--accent);
+
+    color:black;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+}

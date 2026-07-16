@@ -1,0 +1,78 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fade 0.25s ease;
+}
+
+.modal {
+  width: 420px;
+  background: #181818;
+  border: 1px solid rgba(0, 255, 140, 0.15);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 0 40px rgba(0, 255, 140, 0.08);
+}
+
+.modal h2 {
+  font-family: "Orbitron", sans-serif;
+  color: white;
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+}
+
+.modal p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+}
+
+.cancel {
+  padding: 12px 24px;
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.cancel:hover {
+  border-color: white;
+  color: white;
+}
+
+.confirm {
+  padding: 12px 24px;
+  background: #991b1b;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.confirm:hover {
+  background: #dc2626;
+  box-shadow: 0 0 16px rgba(255, 0, 0, 0.25);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

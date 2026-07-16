@@ -1,0 +1,232 @@
+.workspace {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 32px 0 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ---------------- Header ---------------- */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 8px;
+}
+
+.back {
+  border: none;
+  background: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: 0.25s;
+}
+
+.back:hover {
+  color: var(--accent);
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.edit,
+.delete {
+  height: 42px;
+  padding: 0 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.25s;
+}
+
+.edit {
+  background: transparent;
+  border: 1px solid rgba(0, 255, 140, 0.18);
+  color: var(--accent);
+}
+
+.edit:hover {
+  background: rgba(0, 255, 140, 0.08);
+  border-color: var(--accent);
+}
+
+.delete {
+  background: transparent;
+  border: 1px solid rgba(255, 85, 85, 0.25);
+  color: #ff5555;
+}
+
+.delete:hover {
+  background: rgba(255, 85, 85, 0.08);
+}
+
+/* ---------------- Hero ---------------- */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.1;
+  color: var(--text-primary);
+}
+
+.hero p {
+  max-width: 720px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+/* ---------------- Top Layout ---------------- */
+
+.topGrid {
+  display: grid;
+  grid-template-columns: 1.8fr 0.9fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* ---------------- Common Card ---------------- */
+
+.infoCard,
+.panel {
+  background: #181818;
+  border: 1px solid rgba(0, 255, 140, 0.12);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.actionButton {
+  width: 100%;
+
+  height: 44px;
+
+  margin-bottom: 12px;
+
+  border: 1px solid rgba(0, 255, 140, 0.15);
+
+  background: transparent;
+
+  color: var(--text-primary);
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.actionButton:hover {
+  border-color: var(--accent);
+
+  background: rgba(0, 255, 140, 0.05);
+}
+
+/* ---------------- Goal Information ---------------- */
+
+.infoCard h3 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 24px;
+  color: var(--text-primary);
+}
+
+.infoItem {
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.infoItem:last-child {
+  border-bottom: none;
+}
+
+.infoItem span {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.infoItem p {
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.middleGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+/* ---------------- Full Width Sections ---------------- */
+
+.section {
+  background: #181818;
+  border: 1px solid rgba(0, 255, 140, 0.12);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.sectionHeader h2 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.1rem;
+}
+
+.empty {
+  padding: 48px 0;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+/* ---------------- Responsive ---------------- */
+
+@media (max-width: 1000px) {
+  .topGrid,
+  .middleGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 700px) {
+  .workspace {
+    padding: 24px 0 48px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .actions {
+    width: 100%;
+  }
+
+  .edit,
+  .delete {
+    flex: 1;
+  }
+}
