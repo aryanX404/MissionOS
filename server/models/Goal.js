@@ -46,6 +46,32 @@ const goalSchema = new mongoose.Schema(
       default: 0,
     },
 
+    status: {
+      type: String,
+      enum: ["active", "paused", "completed", "archived"],
+      default: "active",
+    },
+
+    roadmapGenerated: {
+      type: Boolean,
+      default: false,
+    },
+
+    currentPhase: {
+      type: Number,
+      default: 1,
+    },
+
+    estimatedDailyHours: {
+      type: Number,
+      default: 2,
+    },
+
+    lastAIGeneratedAt: {
+      type: Date,
+      default: null,
+    },
+
     completed: {
       type: Boolean,
       default: false,
